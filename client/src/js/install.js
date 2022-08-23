@@ -17,4 +17,7 @@ butInstall.addEventListener('click', async (event) => {
 });
 
 // TODO: Add an handler for the `appinstalled` event
-window.addEventListener('appinstalled', (event) => { });
+// The appinstalled event of the Web Manifest API is fired when the browser has successfully installed a page as an application.
+window.addEventListener('appinstalled', (event) => { 
+    console.log('👍', 'appinstalled', event);
+});
