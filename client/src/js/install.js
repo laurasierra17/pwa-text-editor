@@ -6,14 +6,13 @@ const butInstall = document.getElementById('buttonInstall');
 // This interface inherits from the Event interface.
 window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
-    butInstall.style.visibility = 'visible';
+    butInstall.classList.toggle("hidden", false);
 });
 
 // TODO: Implement a click event handler on the `butInstall` element
 butInstall.addEventListener('click', async (event) => {
     event.prompt();
-    butInstall.setAttribute('disabled', true);
-    butInstall.textContent = 'Installed!';
+    butInstall.classList.toggle("hidden", true);
 });
 
 // TODO: Add an handler for the `appinstalled` event
